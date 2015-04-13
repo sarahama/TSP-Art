@@ -23,7 +23,7 @@
          //checks to see if any key is released
           public void keyReleased(KeyEvent e)
          {
-         	hello
+         	
             int k=e.getKeyCode();
             if(!screen.hasWon(screen.getBoard()).equals("nobody"))  
             {
