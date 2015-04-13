@@ -10,7 +10,7 @@
        public static class listen implements KeyListener 
       {
          
-          public void keyTyped(int e)
+          public void keyTyped(KeyEvent e)
          {
             
          }
@@ -23,6 +23,7 @@
          //checks to see if any key is released
           public void keyReleased(KeyEvent e)
          {
+         	hello
             int k=e.getKeyCode();
             if(!screen.hasWon(screen.getBoard()).equals("nobody"))  
             {
