@@ -10,7 +10,7 @@
        public static class listen implements KeyListener 
       {
          
-          public void keyTyped(KeyEvent e)
+          public void keyTyped(int e)
          {
             
          }
