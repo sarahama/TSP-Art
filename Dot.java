@@ -14,7 +14,7 @@ public static void main(String[] args){
 
 //obtain image in the file
 BufferedImage img = null;
-try{ img = ImageIO.read(new File("drizzy4.png"));}
+try{ img = ImageIO.read(new File("drizzy4.jpg"));}
 catch(IOException e){
 }
 
