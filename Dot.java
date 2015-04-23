@@ -14,7 +14,7 @@ public static void main(String[] args){
 
 //obtain image in the file
 BufferedImage img = null;
-try{ img = ImageIO.read(new File("audrey3.png"));}
+try{ img = ImageIO.read(new File("drizzy4.png"));}
 catch(IOException e){
 }
 
@@ -47,7 +47,7 @@ int ind = nodes.size();
 n.setIndex(ind);
 nodes.add(n);
 
-j = j+ (int)(w*.003); nodesW++;} i = i + (int)(w*.003); nodesH ++;}
+j = j+ (int)(w*.004); nodesW++;} i = i + (int)(w*.004); nodesH ++;}
 
 
 
