@@ -9,6 +9,7 @@ public class Node {
     boolean v;      //true if the node has been visited
     int sum;        //sum of the distance to that node
     int index;      //the index of the node in the node list
+    boolean stippled; //true if the node is being used as a stipple
 
 
     // specific constructor
@@ -20,6 +21,7 @@ public class Node {
        this.v = false;
        this.index = -1;
        this.sum = 600; //make sure this starts at a value greater than the threshold
+       this.stippled = false;
     }
 
 
@@ -73,5 +75,22 @@ public class Node {
     //set the sum for the node
     public void setSum(int s){
         this.sum = s;
+    }
+
+     //set stippled to true
+    public void setStip(){
+        this.stippled = true;
+    }
+
+     //return whether the node has been stippled
+    public boolean getStip(){
+        return this.stippled;
+    }
+
+    public boolean stippable(Node a, Node b, Node c, Node d){
+        if(!a.getStip() && !b.getStip() && !c.getStip() && !d.getStip()){
+            return true;
+        }
+        else return false;
     }
 }
