@@ -14,7 +14,7 @@ public static void main(String[] args){
 
 //obtain image in the file
 BufferedImage img = null;
-try{ img = ImageIO.read(new File("drizzy4.jpg"));}
+try{ img = ImageIO.read(new File("clock.jpg"));}
 catch(IOException e){
 }
 
@@ -85,11 +85,10 @@ for(int i = 0; i < nodesH; i++){
 
 
 ArrayList<Node> stip  = buildStipples(adjac, nodesW, nodes);
-//stip holds the nodes and their coordinates all selected to be stipples
+//stip holds the nodes and coordinates of all selected stipples
+//we will use this list "stip" to build the MST
 
-/*for(int i =0; i< stip.size(); i++){
-    System.out.println("("+ stip.get(i).getX() + ", " + stip.get(i).getY() + ")");
-}*/
+
 
 
         JFrame window = new JFrame( "TSP Art" );

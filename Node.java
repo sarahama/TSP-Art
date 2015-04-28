@@ -1,4 +1,4 @@
-
+import java.lang.Math;
 
 public class Node {
 
@@ -10,6 +10,7 @@ public class Node {
     int sum;        //sum of the distance to that node
     int index;      //the index of the node in the node list
     boolean stippled; //true if the node is being used as a stipple
+    int count;      //the number of nodes the node is connected to in the MST
 
 
     // specific constructor
@@ -22,6 +23,7 @@ public class Node {
        this.index = -1;
        this.sum = 600; //make sure this starts at a value greater than the threshold
        this.stippled = false;
+       this.count = 0;
     }
 
 
@@ -92,5 +94,23 @@ public class Node {
             return true;
         }
         else return false;
+    }
+
+
+    public double distance(Node b){
+        int x = this.getX() - b.getX();
+        int y = this.getY()- b.getY();
+        double z = Math.sqrt((x*x)+ (y*y));
+        return z;
+    }
+
+    //returns the count for the node
+    public int getCount(){
+        return this.count;
+    }
+
+    //adds to the count of the node
+    public void addCount(){
+        this.count = this.count +1;
     }
 }
