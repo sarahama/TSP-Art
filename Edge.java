@@ -58,6 +58,15 @@ public class Edge {
    		int y = this.start.getIndex();
         return y;
     }
-  
+
+    //return the start node
+    public Node getStart(){
+        return this.start;
+    }
+
+    //return the end node
+    public Node getEnd(){
+        return this.end;
+    }
 
 }

@@ -11,6 +11,7 @@ public class Node {
     int index;      //the index of the node in the node list
     boolean stippled; //true if the node is being used as a stipple
     int count;      //the number of nodes the node is connected to in the MST
+    int qIndex;     //the node's index in the queue
 
 
     // specific constructor
@@ -24,6 +25,7 @@ public class Node {
        this.sum = 600; //make sure this starts at a value greater than the threshold
        this.stippled = false;
        this.count = 0;
+       this.qIndex = -1;
     }
 
 
@@ -67,6 +69,17 @@ public class Node {
     public void setIndex(int s){
     
         this.index = s;
+    }
+
+    //return the value of the index 
+    public int getQIndex(){
+        return this.qIndex;
+    }
+    
+    //set the index of the node to s
+    public void setQIndex(int s){
+    
+        this.qIndex = s;
     }
     
     //return the sum for the node

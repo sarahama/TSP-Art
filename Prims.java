@@ -55,21 +55,21 @@ public class Prims {
 
         //make a list of random nodes to build the MST from
         ArrayList<Node> nodes = new ArrayList<Node>();
-        ArrayList<Node> unvisited = new ArrayList<Node>();
-        for(int i =0; i< 400; i++){
+        //ArrayList<Node> unvisited = new ArrayList<Node>();
+        for(int i =0; i< 1000; i++){
           Random dice = new Random();
           int x = dice.nextInt(475);
           int y = dice.nextInt(500);
           Node n = new Node(x,y,0);
           n.setIndex(nodes.size());
           nodes.add(n);
-          unvisited.add(n);
+          //unvisited.add(n);
         }
 
 
 
-        ArrayList<Integer> path = buildEdges(475, 500, nodes, unvisited);
-
+        //ArrayList<Integer> path = buildEdges(475, 500, nodes, unvisited);
+        ArrayList<Integer> path = buildEdges(475, 500, nodes);
     
 
         //go through the edges in the list and print them to the window
@@ -143,7 +143,7 @@ while(hasIntersections(lines)){
 
       System.out.println("has intersections: " + hasIntersections(lines));
       System.out.println("fully connected: " + allEdges(lines));
-      
+
       //print the final graph
       for(int i = 0; i < lines.size(); i++){
         g2.draw(lines.get(i));
@@ -161,12 +161,15 @@ while(hasIntersections(lines)){
     }
 
     //********** Prims *******************
-     public static ArrayList<Integer> buildEdges(int width, int height, ArrayList<Node> nodes, ArrayList<Node> unvisited){
+     public static ArrayList<Integer> buildEdges(int width, int height, ArrayList<Node> nodes){
         //start a priority queue, add an arbitrary node to the queue
         //find the shortest distance to an unvisited node from any node in the queue
         //whichever is the shortest, add that one to the queue
         //create the corresponding edge and add it to the list of edges
         //repeat until all of the nodes have been added
+
+        //make a copy
+        ArrayList<Node> unvisited = new ArrayList<Node>(nodes);
         ArrayList<Edge> edges = new ArrayList<Edge>();
         ArrayList<Node> queue = new ArrayList<Node>();
 
